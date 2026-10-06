@@ -1,0 +1,12 @@
+{
+  "name": "anketa-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Фронтенд конструктора анкет",
+  "scripts": {
+    "start": "serve frontend -l 3000"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}

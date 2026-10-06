@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Конструктор анкет</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Конструктор анкет</h1>
+    <div class="topbar-actions">
+      <button id="import-btn" class="btn ghost" type="button">Импорт из файла</button>
+      <input id="import-input" type="file" accept="application/json,.json" hidden />
+      <button id="export-btn" class="btn ghost" type="button">Сохранить в файл</button>
+      <button id="add-anketa-btn" class="btn primary" type="button">+ Добавить анкету</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Форма создания анкеты -->
+    <section id="anketa-form-panel" class="panel hidden">
+      <h2>Новая анкета</h2>
+      <form id="anketa-form">
+        <div class="field">
+          <label for="anketa-title">Название анкеты</label>
+          <input id="anketa-title" type="text" placeholder="Например: Анкета клиента" required />
+        </div>
+        <div class="form-actions">
+          <button type="button" id="anketa-cancel" class="btn secondary">Отмена</button>
+          <button type="submit" class="btn primary">Сохранить</button>
+        </div>
+      </form>
+    </section>
+
+    <div id="status" class="status" role="status"></div>
+    <div id="anketa-list" class="anketa-list"></div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
